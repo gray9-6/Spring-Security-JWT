@@ -23,7 +23,7 @@ public class JwtService {
         String token = Jwts.builder()
                 .subject(user.getUsername())   // here subject is username
                 .issuedAt(new Date(System.currentTimeMillis()))
-                .expiration(new Date(System.currentTimeMillis() + 24*60*60*1000))
+                .expiration(new Date(System.currentTimeMillis() + HOURS))
                 .signWith(getSignInKey())
                 .compact();
 
@@ -87,3 +87,16 @@ public class JwtService {
 *    4.1 extractUserName()
 *    4.2 validate token()  :- 4.2.1  isToken Expired()  :- 4.2.1.1 extractExpiration()
 * */
+
+
+
+
+
+
+
+
+
+
+
+
+
